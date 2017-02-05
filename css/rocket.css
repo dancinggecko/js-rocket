@@ -1,0 +1,164 @@
+/* for comments in css */ 
+
+body{
+	font-family: 'helvetica', 'arial', sans-serif;
+}
+
+.left{
+	background-color: aquamarine;
+	position: fixed;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.interface{
+	text-align: center;
+	padding: 20px;
+}
+
+a.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none; /* takes away the underline*/
+	text-transform: uppercase;
+	border-radius: 10px; /*round edges*/
+	transition: color 300ms;
+
+}
+
+a:hover{
+	color: red;
+}
+
+/* grabbed from another project*/
+
+a.abortbutton {
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 10px;
+	transition: background-color 300ms;
+	transition: color 300ms;
+}
+
+a.abortbutton:hover {
+	background-color: blue;
+	color: magenta;
+}
+/* grabbed from another project*/
+
+.right{
+	background-color: aliceblue;
+	position: fixed;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	right: 0;
+}
+
+.ground{
+	background: url('../img/Ground.png') no-repeat center center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 34px;
+}
+
+.going-home{
+	position: absolute;
+	bottom: 210px;
+	left: 50%;
+	background: url('../img/GoingHome.png') no-repeat 0 0;
+	width: 250px;
+	height: 158px;		
+	margin-left: -208px;
+	display: none;
+}
+.going-home.show{
+	display: block;
+}
+
+.Yay{
+	position: absolute;
+	bottom: 210px;
+	left: 50%;
+	background: url('../img/Yay.png') no-repeat 0 0;
+	width: 250px;
+	height: 150px;		
+	display: none;
+}
+.Yay.show{
+	display: block;
+}
+
+.rocket{
+	position: absolute;
+	left: 50%;
+	bottom: -15px;
+	/* In Chrome choose Elements and Styles and play with heights until figured out */
+	width: 150px;
+	height: 250px;
+	margin-left: -75px; 
+	/* to centre the rocket, half the width */
+	background: url('../img/Rocket.png') no-repeat 0 0; 
+	/* 0 0 refers to X and Y height */
+	transition: bottom 10000ms;
+}
+
+/* rocket bg image*/
+
+body.body-state2 .rocket{
+	background-image: url('../img/RocketLaunching.gif');
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/RocketFlying.gif');
+}
+body.body-state5 .rocket{
+	background-image: url('../img/BOOM.png');
+	width: 200px;
+	height: 159px;
+	margin-left: -100px;
+}
+
+
+body.body-state1 .rocket{
+	background: url('../img/Rocket.png');
+	transition: none;
+}
+
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	bottom: 1000px;
+}
+
+.state1,
+.state2,
+.state3,
+.state4,
+.state5{
+	display: none;
+}
+
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}
+
+a{
+
+}
+
+a.button{
+
+}
